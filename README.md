@@ -12,6 +12,6 @@ interfaz amigable: su interfaz te muestra de una forma muy clara que cosas te fa
 
 Ha sido un proyecto personal que ha requerido mucho esfuerzo y dedicación. Espero sinceramente que esta herramienta te ayude a aumentar tu productividad y simplificar tu vida diaria.
 
-¡No dudes en probarla! Encuentra la aplicación aquí.
+¡No dudes en probarla! puedes verla aka:  https://tasknewapp.netlify.app/
 
 
