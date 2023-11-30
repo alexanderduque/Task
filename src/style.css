@@ -1,0 +1,689 @@
+body {
+    background-image: linear-gradient( 110.2deg,  rgba(54,200,240,1) 18.2%, rgba(54,21,75,1) 92.4% );    
+
+    max-width: 100%; /* Limita el ancho máximo del contenedor */
+max-height: 100%; /* Limita el ancho máximo del contenedor */
+overflow-x: hidden;
+
+
+    
+  }
+h1 {
+    font-size : 40px; 
+    text-align : center;
+    margin : 0;
+    padding: 48px;
+    color:white;
+    margin-bottom: 3%;
+}
+
+.backCounter {
+
+    background-color: rgba(26, 16, 93, 0.900);
+    width: 500px;
+    height: 750px;
+    margin-left: 6%;
+    margin-top: 30px;
+    position: absolute;
+    border-radius: 20px;
+  
+    
+}
+
+.backCounter img{
+   
+    width: 80%;
+    height: 55%;
+    position: absolute;
+    bottom: 10px; /* Coloca la imagen en la parte inferior del contenedor */
+  left: 50%; /* Centra horizontalmente la imagen */
+  transform: translateX(-50%);
+  
+
+
+}
+
+.backCounter input{
+    background-color: rgba(128, 128, 128, 0.307);
+    
+}
+
+.createCounter{
+
+    text-align: center;
+}
+
+.createCounter span{
+
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   text-align: center;
+
+}
+
+.createCounter input{
+
+    width: 80%;
+    height: 25px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    margin-top: 20px;
+
+
+}
+.createCounter input::placeholder{
+
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    font-weight: 300;
+
+}
+.createCounter button{
+    background-color: blueviolet;
+    color: white;
+    padding: 10px;
+    width: 35%;
+    border: none;
+    border-radius: 15px;
+    margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    
+  
+
+}
+
+/*search*/
+
+.search{
+
+    position: absolute;
+    top: 0%; /* Ajusta la distancia desde el margen superior */
+    right: 15%; /* Ajusta la distancia desde el margen derecho */
+    padding: 10px;
+    text-align: center;
+  
+
+}
+.search h2{
+
+    font-size: 40px;
+    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgba(26, 16, 93, 0.580);
+    color: white;
+    font-weight: 900;
+    padding: 15px;
+    box-shadow: 10px 18px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    
+
+
+}
+.search span{
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+.search input{
+
+    margin-top: 15px;
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+    background-color: whitesmoke;
+    width:  80%;
+}
+
+.listaTodos{
+  
+    position: absolute;
+    top: 45%;
+    right: 12%;
+}
+
+
+/* TodoItems */
+
+.items{
+      
+    list-style: none;
+    color: rgb(245, 245, 245);
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    
+    
+}
+.itemsLi{
+    margin-bottom: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    width: 350px;
+    display: flex; /* Utiliza flexbox para alinear elementos */
+    align-items: center; 
+    background-color: rgba(128, 128, 128, 0.500);
+}
+
+
+.icon-check {
+
+    margin-right: auto; /* Coloca el elemento a la derecha */
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
+.icon-delete {
+    margin-left: auto; /* Coloca el elemento a la izquierda */
+    cursor: pointer;
+    position: relative;
+    bottom: 18px;
+   
+
+
+  }
+
+.icon-svg{
+    width: 24px;
+    height: 24px;
+    
+} 
+  
+  .completed {
+    text-decoration: line-through; /* Línea tachada para elementos completados */
+    /* Otros estilos adicionales para elementos completados */
+  }
+
+/*  button */
+
+.button{
+    position: fixed;
+    right: 3%;
+    top: 90%;
+    background-color: white;
+    color: grey;
+    font-size: 30px;
+    width: 4%;
+    height: 5%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/* ESTADO DE CARGA Y ERROR */
+.icon-check-cargando {
+
+    margin-right: auto; /* Coloca el elemento a la derecha */
+    margin-bottom: 10px;
+    cursor: pointer;
+    height: 48px;
+    width: 48px;
+  }
+
+.icon-delete-cargando {
+    margin-left: auto; /* Coloca el elemento a la izquierda */
+    cursor: pointer;
+    position: relative;
+    bottom: 18px;
+    height: 48px;
+    width: 48px;
+   
+
+
+  }
+
+
+.itemsLi-cargar{
+   
+    margin-bottom: 30px;
+    border-radius: 20px;
+    padding: 10px;
+    width: 300px;
+    height: 50px;
+    display: flex; /* Utiliza flexbox para alinear elementos */
+    align-items: center; 
+    
+}
+  
+  
+  .itemsLi-cargar{
+
+    background: linear-gradient(90deg, rgb(108, 100, 100),rgba(200, 199, 199, 0.319));
+    background-size:200% 200%;
+    animation: loadingAnimation 3s ease-in-out infinite;
+  }  
+
+  @keyframes loadingAnimation{
+
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+   
+  }
+
+  /* CONGRATULATIONS */
+  .congratulations{
+    position: absolute;
+    top: 26%;
+    right: 12%;
+    font-size: 20px;
+    color: whitesmoke;
+    font-weight: bold;
+    text-align: center;
+}
+.congratulations img{
+    width: 280px;
+    height: 120px;
+    margin-top: -15px;
+
+}
+
+/*ErrorDefault */
+
+.P-error{
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    top: -10vh;
+    height: 55px;
+    right: 4vw;
+    color: white;
+    background-color: rgba(128, 128, 128, 0.312);
+    border: solid 5px rgba(54,200,240,1);
+    padding: 2px;
+    border-radius: 10px;
+
+}
+
+
+  /*--MEDIA QUERIES--*/
+  
+  
+  @media (max-width: 1150px){
+
+      /*TODOCOUNTER*/   
+
+      .createCounter button{
+        padding: 5px;
+        width: 40%;
+        height: 40px;
+        border-radius: 15px;
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    h1{
+        font-size: 25px;
+        padding: 0px;
+        margin-top: 20px;
+        margin-bottom: 10%;
+    }
+  
+    .backCounter {
+        position: absolute;
+        left: 5vw;
+        width: 80vw;
+        height: 80%;
+        margin-top:10px;
+        border-radius: 20px;
+        
+    }
+
+    .backCounter img{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        bottom: 0px;
+        margin-top: 20%;
+
+    }
+    
+    
+    
+    .createCounter span{
+        font-size: 15px;
+        
+        
+    }
+    
+    .createCounter input{
+    
+        width: 70%;
+        height: 25px;
+        border-radius: 15px;
+        border: none;
+        margin-top: 24px;
+        margin-bottom: 20px;
+        font-size: 12px;
+        
+        
+    }
+
+    /* TODOSEARCH */
+    
+    .search,.search2{
+        position: absolute;
+        top: 65vh;
+        right: 37vw;
+    }
+    .itemsLi{
+        position: relative;
+        top:  40vh;
+        right: 20vw;
+        width: 300px;
+        height: 50px;
+        border-radius: 10px;
+        padding: 10px;
+        width: 350px;
+        display: flex; /* Utiliza flexbox para alinear elementos */
+        align-items: center; 
+        background-color: rgba(128, 128, 128, 0.500);
+        
+        
+        
+    }
+    .P-error{
+        font-size: 20px;
+        font-weight: bold;
+        position: relative;
+        top: 350px;
+        height: 45px;
+        right: 26vw;
+        color: white;
+        background-color: rgba(128, 128, 128, 0.312);
+        border: solid 5px rgba(54,200,240,1);
+        padding: 5px;
+    
+    }
+
+    .search h2{
+        font-size: 25px;
+        width: 200px;
+        height: 30px;
+        padding: 10px;
+    }
+
+    
+    
+.search span{
+    
+    font-size: 18px;
+    
+}
+.search2 input{
+
+    margin-top: 15px;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    width: 150px;
+}
+
+.listaTodos1{
+   
+    
+    border-radius: 20px;
+    padding: 10px;
+    width: 250px;
+    height: 30px;
+    position: absolute;
+    top: 20vh;
+    right: 30vw;
+    
+}
+
+
+
+}
+@media (max-width: 900px){
+    .backCounter {
+        position: absolute;
+        left: 5vw;
+        width: 80vw;
+        height: 60%;
+        margin-top:10px;
+        border-radius: 20px;
+        
+    }
+
+  
+  .search,.search2{
+      position: absolute;
+      top: 65vh;
+      right: 35vw;
+      
+  }
+  .itemsLi{
+      position: relative;
+      top:  40vh;
+      right: 15vw;
+ 
+  }
+
+  .P-error{
+       
+    top: 40vh;  
+    right: 22vw;
+
+
+}  
+.itemsLi-cargar{
+
+    width: 350px;
+    height: 35px;
+}
+
+}
+
+.listaTodos1{
+   
+    
+    border-radius: 20px;
+    padding: 10px;
+    width: 200px;
+    height: 25px;
+
+    position: absolute;
+    top: 20vh;
+    right: 35vw;
+    
+}
+.congratulations{
+    position: absolute;
+    top: 95%;
+    right: 17vh;
+    left: 17vh;
+
+}
+
+.congratulations img{
+    width: 350px;
+    height: 180px;
+   
+   
+}
+
+  @media (max-width: 700px){
+
+    .backCounter {
+        position: absolute;
+        left: 5vw;
+        width: 80vw;
+        height: 60%;
+        margin-top:10px;
+        border-radius: 20px;
+        
+    }
+  
+    .search,.search2{
+        position: absolute;
+        top: 65vh;
+        right: 30vw;
+     
+    }
+    .itemsLi{
+        position: relative;
+        top:  40vh;
+        right: 10vw;
+   
+    }  
+    .P-error{
+       
+       
+        right: 18vw;
+   
+
+    }  
+
+}
+@media (max-width: 600px){
+
+    .search,.search2{
+        position: absolute;
+        top: 65vh;
+        right: 25vw;
+    }
+    .itemsLi{
+        position: relative;
+        top:  40vh;
+     left:-2vw ;
+   
+    }  
+
+    .P-error{
+        font-size: 15px;
+      
+        right: 18vw;
+   
+
+    }  
+
+}
+
+@media (max-width: 470px){
+
+    .backCounter {
+        position: absolute;
+        left: -1vw;
+        width: 90vw;
+        height: 60%;
+        margin-top:10px;
+        border-radius: 20px;
+        
+    }
+    .search,.search2{
+        right: 20vw;
+    }
+
+    .itemsLi{
+
+     left:5vw ;
+     
+     margin-top: 10%;
+   
+    }  
+
+    .listaTodos1{
+   
+    
+        border-radius: 20px;
+        padding: 10px;
+        width: 100px;
+        height: 15px;
+        position: absolute;
+        top: 20vh;
+      
+        
+    }
+    .itemsLi-cargar{
+
+        width: 200px;
+        height: 25px;
+    }
+
+    .P-error{
+       
+      
+        right: 15vw;
+   
+
+    }  
+
+
+}
+
+@media (max-width: 430px){
+    
+    .itemsLi{
+
+        left: -1vw;
+        width: 270px;
+        margin-top: 20%;
+       
+       }  
+
+    .search,.search2{
+        right: 17vw;
+    }   
+    .P-error{
+       
+        top: 45vh;
+        right: 12vw;
+   
+
+    }  
+
+    .congratulations{
+        position: absolute;
+        top: 99%;
+        right: 17vh;
+        left: 17vh;
+    
+    }
+    
+    .congratulations img{
+        width: 280px;
+        height: 170px;
+       
+       
+    }
+
+
+}
+@media (max-width: 380px){
+
+
+    
+    .search,.search2{
+        right: 15vw;
+    }   
+
+    .itemsLi{
+
+        left: 2vw;
+        
+       
+       }  
+
+       .P-error{
+       
+      
+        right: 10vw;
+   
+
+    }     
+
+}
