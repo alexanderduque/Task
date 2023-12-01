@@ -82,7 +82,7 @@ const TodoCounter = () => {
         <div />
 
         <input
-          placeholder='Hacer Ejercisio a las 09:00 AM'
+          placeholder='Hacer Ejercicio a las 09:00 AM'
           value={valueTodo}
           onChange={handleChange}
           required
